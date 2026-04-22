@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DailyVerse</string>
+    <string name="app_tagline">"Your daily word, beautifully displayed"</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Today\'s Verse</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_memorization">Memorization</string>
+    <string name="nav_image_source">Image Source</string>
+    <string name="nav_history">History</string>
+
+    <!-- Modes -->
+    <string name="mode_daily_inspiration">Daily Inspiration</string>
+    <string name="mode_daily_inspiration_desc">A new random verse every day</string>
+    <string name="mode_memorization">Memorization Mode</string>
+    <string name="mode_memorization_desc">Sequential verses from a chosen book</string>
+
+    <!-- Bible Versions -->
+    <string name="version_kjv">King James Version (KJV)</string>
+    <string name="version_niv">New International Version (NIV)</string>
+    <string name="version_esv">English Standard Version (ESV)</string>
+    <string name="version_nkjv">New King James Version (NKJV)</string>
+    <string name="version_nlt">New Living Translation (NLT)</string>
+    <string name="version_web">World English Bible (WEB)</string>
+
+    <!-- Image Sources -->
+    <string name="source_nature">Nature &amp; Landscapes</string>
+    <string name="source_sunrise">Sunrises &amp; Sunsets</string>
+    <string name="source_mountains">Mountains</string>
+    <string name="source_ocean">Ocean &amp; Water</string>
+    <string name="source_forest">Forests &amp; Trees</string>
+    <string name="source_flowers">Flowers &amp; Gardens</string>
+    <string name="source_stars">Night Sky &amp; Stars</string>
+    <string name="source_abstract">Abstract &amp; Minimal</string>
+    <string name="source_gradient">Soft Gradients</string>
+    <string name="source_gallery">My Gallery</string>
+
+    <!-- Settings -->
+    <string name="setting_update_time">Daily Update Time</string>
+    <string name="setting_verse_count">Verses Per Day</string>
+    <string name="setting_font_size">Verse Font Size</string>
+    <string name="setting_font_style">Font Style</string>
+    <string name="setting_show_reference">Show Verse Reference</string>
+    <string name="setting_dark_overlay">Dark Overlay for Readability</string>
+    <string name="setting_notification">Verse Ready Notification</string>
+
+    <!-- Actions -->
+    <string name="action_apply_wallpaper">Set as Wallpaper</string>
+    <string name="action_share">Share</string>
+    <string name="action_save">Save</string>
+    <string name="action_preview">Preview</string>
+    <string name="action_refresh">New Image</string>
+    <string name="action_start_memorization">Start Memorization</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_reset_progress">Reset Progress</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Daily Verse</string>
+    <string name="notification_channel_desc">Notifications when your daily verse is ready</string>
+    <string name="notification_title">Your Daily Verse is Ready</string>
+    <string name="notification_body">Tap to view today\'s verse and wallpaper</string>
+
+    <!-- Messages -->
+    <string name="msg_wallpaper_set">Wallpaper set successfully!</string>
+    <string name="msg_wallpaper_error">Failed to set wallpaper. Please try again.</string>
+    <string name="msg_no_internet">No internet connection. Using offline verses.</string>
+    <string name="msg_progress_saved">"Progress saved! You\'re on verse %1$d of %2$d"</string>
+    <string name="msg_book_completed">Congratulations! You\'ve completed %1$s!</string>
+    <string name="msg_select_book">Select a book and chapter to begin</string>
+
+    <!-- Unsplash -->
+    <string name="unsplash_credit">Photo by %1$s on Unsplash</string>
+</resources>
