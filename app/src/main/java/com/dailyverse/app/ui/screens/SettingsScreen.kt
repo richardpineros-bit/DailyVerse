@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.ui.Alignment
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AccessTime
@@ -139,9 +138,10 @@ fun SettingsScreen(
             SettingsClickableItem(
                 icon = Icons.Default.Image,
                 title = "Image Source",
-                subtitle = settings.imageSource.category?.displayName
+                subtitle = settings.imageSource.unsplashCategory?.displayName
+                    ?: settings.imageSource.pexelsSearchQuery?.let { "Pexels: $it" }
                     ?: settings.imageSource.gradientTheme?.displayName
-                    ?: "Nature & Landscapes",
+                    ?: "4K Nature",
                 onClick = onNavigateToImageSource
             )
 
@@ -261,7 +261,7 @@ fun ModeOption(
             .fillMaxWidth()
             .clickable(onClick = onSelect)
             .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = androidx.compose.ui.Alignment.CenterVertically
     ) {
         RadioButton(
             selected = selected,
@@ -295,7 +295,7 @@ fun VersionOption(
             .fillMaxWidth()
             .clickable(onClick = onSelect)
             .padding(horizontal = 16.dp, vertical = 10.dp),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = androidx.compose.ui.Alignment.CenterVertically
     ) {
         RadioButton(
             selected = selected,
@@ -447,7 +447,7 @@ fun FontSizeSelector(
                         modifier = Modifier
                             .padding(vertical = 12.dp)
                             .fillMaxWidth(),
-                        contentAlignment = Alignment.Center
+                        contentAlignment = androidx.compose.ui.Alignment.Center
                     ) {
                         Text(
                             text = "A",
@@ -500,7 +500,7 @@ fun FontStyleSelector(
                         modifier = Modifier
                             .padding(vertical = 12.dp)
                             .fillMaxWidth(),
-                        contentAlignment = Alignment.Center
+                        contentAlignment = androidx.compose.ui.Alignment.Center
                     ) {
                         Text(
                             text = style.displayName,
@@ -536,7 +536,7 @@ fun TimePickerDialog(
         ) {
             Column(
                 modifier = Modifier.padding(16.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally
             ) {
                 Text(
                     text = "Select Update Time",
