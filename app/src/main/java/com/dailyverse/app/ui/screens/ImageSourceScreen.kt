@@ -1,10 +1,12 @@
 package com.dailyverse.app.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -54,7 +56,7 @@ import com.dailyverse.app.data.model.ImageSourceType
 import com.dailyverse.app.data.model.Unsplash4KCategory
 import com.dailyverse.app.ui.viewmodel.SettingsViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 fun ImageSourceScreen(
     viewModel: SettingsViewModel,
@@ -149,10 +151,7 @@ fun ImageSourceScreen(
                     else MaterialTheme.colorScheme.surface
                 ),
                 border = if (currentType == ImageSourceType.PEXELS_CUSTOM) {
-                    androidx.compose.foundation.border.BorderStroke(
-                        2.dp,
-                        MaterialTheme.colorScheme.primary
-                    )
+                    BorderStroke(2.dp, MaterialTheme.colorScheme.primary)
                 } else null
             ) {
                 Column(
@@ -218,7 +217,7 @@ fun ImageSourceScreen(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
-            androidx.compose.foundation.layout.FlowRow(
+            FlowRow(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
@@ -338,10 +337,7 @@ fun CategoryCard(
             else MaterialTheme.colorScheme.surface
         ),
         border = if (selected) {
-            androidx.compose.foundation.border.BorderStroke(
-                2.dp,
-                MaterialTheme.colorScheme.primary
-            )
+            BorderStroke(2.dp, MaterialTheme.colorScheme.primary)
         } else null
     ) {
         Column(
@@ -400,10 +396,7 @@ fun GradientCard(
             containerColor = MaterialTheme.colorScheme.surface
         ),
         border = if (selected) {
-            androidx.compose.foundation.border.BorderStroke(
-                2.dp,
-                MaterialTheme.colorScheme.primary
-            )
+            BorderStroke(2.dp, MaterialTheme.colorScheme.primary)
         } else null
     ) {
         Column(

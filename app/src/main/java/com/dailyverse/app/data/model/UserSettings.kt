@@ -27,8 +27,10 @@ enum class FontSize(val displayName: String, val scale: Float) {
     LARGE("Large", 1.2f),
     EXTRA_LARGE("Extra Large", 1.5f);
 
-    companion fun fromDisplayName(name: String): FontSize {
-        return entries.find { it.displayName == name } ?: MEDIUM
+    companion object {
+        fun fromDisplayName(name: String): FontSize {
+            return entries.find { it.displayName == name } ?: MEDIUM
+        }
     }
 }
 
@@ -38,7 +40,9 @@ enum class FontStyle(val displayName: String, val fontName: String) {
     SCRIPT("Script", "cursive"),
     MODERN("Modern", "sans-serif-light");
 
-    companion fun fromDisplayName(name: String): FontStyle {
-        return entries.find { it.displayName == name } ?: SERIF
+    companion object {
+        fun fromDisplayName(name: String): FontStyle {
+            return entries.find { it.displayName == name } ?: SERIF
+        }
     }
 }

@@ -20,8 +20,10 @@ enum class Unsplash4KCategory(val query: String, val displayName: String) {
     AURORA_4K("4k aurora borealis northern lights wallpaper", "Aurora 4K"),
     CITYSCAPE_4K("4k cityscape skyline night lights wallpaper", "Cityscape 4K");
 
-    companion fun fromDisplayName(name: String): Unsplash4KCategory {
-        return entries.find { it.displayName == name } ?: NATURE_4K
+    companion object {
+        fun fromDisplayName(name: String): Unsplash4KCategory {
+            return entries.find { it.displayName == name } ?: NATURE_4K
+        }
     }
 }
 
@@ -35,8 +37,10 @@ enum class GradientTheme(val colors: List<String>, val displayName: String) {
     PASTEL_DREAM(listOf("#a8edea", "#fed6e3"), "Pastel Dream"),
     EARTH_TONE(listOf("#3E5151", "#DECBA4"), "Earth Tone");
 
-    companion fun fromDisplayName(name: String): GradientTheme {
-        return entries.find { it.displayName == name } ?: PURPLE_DUSK
+    companion object {
+        fun fromDisplayName(name: String): GradientTheme {
+            return entries.find { it.displayName == name } ?: PURPLE_DUSK
+        }
     }
 }
 

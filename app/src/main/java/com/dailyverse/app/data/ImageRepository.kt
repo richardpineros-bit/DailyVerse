@@ -219,7 +219,7 @@ class ImageRepository @Inject constructor(
         val watermarkPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
             color = textColor
             textSize = 24f
-            typeface = Typeface.SANS_SERIF
+            this.typeface = Typeface.SANS_SERIF
             textAlign = Paint.Align.CENTER
             alpha = 60
         }

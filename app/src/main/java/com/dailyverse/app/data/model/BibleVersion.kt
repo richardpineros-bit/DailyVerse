@@ -8,7 +8,9 @@ enum class BibleVersion(val displayName: String, val apiCode: String, val isBund
     NLT("New Living Translation", "nlt", false),
     WEB("World English Bible", "web", true);
 
-    companion fun fromCode(code: String): BibleVersion {
-        return entries.find { it.apiCode.equals(code, ignoreCase = true) } ?: KJV
+    companion object {
+        fun fromCode(code: String): BibleVersion {
+            return entries.find { it.apiCode.equals(code, ignoreCase = true) } ?: KJV
+        }
     }
 }
