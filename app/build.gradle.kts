@@ -1,9 +1,23 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.dagger.hilt.android")
     id("com.google.devtools.ksp")
 }
+
+// Load API keys from local.properties (NOT committed to Git)
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.inputStream().use { localProperties.load(it) }
+}
+
+// Read API keys from local.properties, fallback to empty string
+val unsplashKey = localProperties.getProperty("UNSPLASH_ACCESS_KEY", "")
+val pexelsKey = localProperties.getProperty("PEXELS_API_KEY", "")
+val bibleKey = localProperties.getProperty("BIBLE_API_KEY", "")
 
 android {
     namespace = "com.dailyverse.app"
@@ -21,9 +35,11 @@ android {
             useSupportLibrary = true
         }
 
-        buildConfigField("String", "UNSPLASH_ACCESS_KEY", "\"YOUR_UNSPLASH_ACCESS_KEY\"")
-        buildConfigField("String", "PEXELS_API_KEY", "\"YOUR_PEXELS_API_KEY\"")
-        buildConfigField("String", "BIBLE_API_KEY", "\"YOUR_BIBLE_API_KEY\"")
+        // API keys injected at build time from local.properties
+        // NEVER hardcode keys here - use local.properties (gitignored)
+        buildConfigField("String", "UNSPLASH_ACCESS_KEY", "\"$unsplashKey\"")
+        buildConfigField("String", "PEXELS_API_KEY", "\"$pexelsKey\"")
+        buildConfigField("String", "BIBLE_API_KEY", "\"$bibleKey\"")
     }
 
     buildTypes {

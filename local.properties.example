@@ -1,0 +1,12 @@
+# DailyVerse API Keys Template
+# Copy this file to local.properties and add your real keys
+# local.properties is gitignored - it will NEVER be committed to GitHub
+#
+# Get your free API keys:
+#   Unsplash: https://unsplash.com/developers (New Application -> copy Access Key)
+#   Pexels:   https://www.pexels.com/api/ (Sign up -> copy API Key)
+#   Bible:    https://scripture.api.bible/ (Sign up -> copy API Key)
+
+UNSPLASH_ACCESS_KEY=your_unsplash_access_key_here
+PEXELS_API_KEY=your_pexels_api_key_here
+BIBLE_API_KEY=your_bible_api_key_here
