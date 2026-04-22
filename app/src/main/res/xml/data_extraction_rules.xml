@@ -3,7 +3,7 @@
     <cloud-backup>
         <include domain="sharedpref" path="."/>
         <include domain="database" path="."/>
-        <exclude domain="external" path="."/>
+        <exclude domain="external"/>
     </cloud-backup>
     <device-transfer>
         <include domain="sharedpref" path="."/>
